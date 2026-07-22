@@ -1,0 +1,209 @@
+/* --- 변수 설정 (브랜드 컬러 팔레트) --- */
+:root {
+    --mint: #88D4AB;
+    --yellow: #FCE38A;
+    --peach: #F38181;
+    --lavender: #C8B6E2;
+    --skyblue: #95E1D3;
+    --black: #111111;
+    --white: #FFFFFF;
+    --gray: #F0F0F0;
+}
+
+/* --- 기본 리셋 및 폰트 --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Jua', sans-serif;
+    color: var(--black);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+/* --- 유틸리티 클래스 --- */
+.bg-yellow { background-color: var(--yellow); }
+.bg-lavender { background-color: var(--lavender); }
+.bg-white { background-color: var(--white); }
+.bg-mint { background-color: var(--mint); }
+
+/* --- 헤더 및 네비게이션 --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: var(--lavender);
+    border-bottom: 3px solid var(--black);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    color: var(--white);
+    text-shadow: 1px 1px 0 var(--black);
+}
+
+/* --- 버튼 스타일 (스티커 팝아트 느낌) --- */
+button {
+    font-family: 'Jua', sans-serif;
+    cursor: pointer;
+    border: 3px solid var(--black);
+    border-radius: 12px;
+    box-shadow: 3px 3px 0px var(--black);
+    transition: all 0.2s ease;
+}
+
+button:active {
+    transform: translate(3px, 3px);
+    box-shadow: 0px 0px 0px var(--black);
+}
+
+.login-btn {
+    background-color: var(--yellow);
+    padding: 8px 16px;
+    font-size: 1rem;
+}
+
+.cta-btn {
+    background-color: var(--mint);
+    padding: 15px 30px;
+    font-size: 1.3rem;
+    margin-top: 20px;
+}
+
+.sub-btn {
+    background-color: var(--peach);
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    margin-top: 15px;
+}
+
+/* --- 섹션 공통 --- */
+section {
+    padding: 60px 5%;
+    text-align: center;
+    border-bottom: 3px solid var(--black);
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+/* --- 카드 디자인 (다이컷 스티커 컨셉) --- */
+.card {
+    background-color: var(--white);
+    border: 3px solid var(--black);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 5px 5px 0px var(--black);
+    margin: 0 auto;
+    text-align: left;
+}
+
+.today-card {
+    max-width: 600px;
+}
+
+.expert-text {
+    font-size: 1.1rem;
+    margin: 15px 0;
+}
+
+.tag {
+    display: inline-block;
+    background-color: var(--gray);
+    border: 2px solid var(--black);
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    font-size: 0.9rem;
+}
+
+/* --- 그리드 레이아웃 (서비스 & 플레이그라운드) --- */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.card-skyblue { background-color: var(--skyblue); }
+.card-peach { background-color: var(--peach); }
+.card-mint { background-color: var(--mint); }
+
+.action-card {
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.action-card:hover {
+    transform: translateY(-5px);
+}
+
+/* --- 푸터 --- */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--gray);
+    font-size: 0.9rem;
+}
+
+/* --- 모달 (팝업) 스타일 --- */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 200;
+}
+
+.modal-content {
+    background-color: var(--white);
+    margin: 15% auto;
+    padding: 40px;
+    border: 3px solid var(--black);
+    border-radius: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 8px 8px 0px var(--black);
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.kakao-btn {
+    background-color: #FEE500;
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
