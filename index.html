@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사주픽(Saju Pick) - 내 운명을 내 맘대로 픽하다</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- MZ 감성의 둥글둥글하고 귀여운 폰트 적용 -->
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 상단 네비게이션바 -->
+    <header id="header">
+        <div class="logo">✨ 사주픽</div>
+        <nav>
+            <ul>
+                <li><a href="#hero">홈</a></li>
+                <li><a href="#sajupick">사주픽</a></li>
+                <li><a href="#playground">플레이그라운드</a></li>
+                <li><a href="#lounge">라운지</a></li>
+            </ul>
+        </nav>
+        <button class="login-btn" onclick="openLoginModal()">카카오 1초 시작</button>
+    </header>
+
+    <main>
+        <!-- Section 1: 히어로 배너 -->
+        <section id="hero" class="bg-yellow">
+            <div class="hero-content">
+                <h1>내 운명을 내 맘대로<br>픽(Pick)하다!</h1>
+                <p>천년의 명리학 데이터베이스, 이제 스티커처럼 내 일상에 착 붙여보세요.</p>
+                <button class="cta-btn">오늘의 운세 처방전 받기</button>
+            </div>
+        </section>
+
+        <!-- Section 2: 오늘의 운세 (명리 전문성 강조) -->
+        <section id="today" class="bg-lavender">
+            <h2 class="section-title">Today's Pick 🔮</h2>
+            <div class="card today-card">
+                <h3>나의 일간(日干)과 일진(日辰)이 만났을 때</h3>
+                <p class="expert-text">
+                    "무토(戊土) 일간인 당신, 오늘은 메마른 땅에 단비가 내리는 형국이네요. 
+                    막혀있던 재물운의 흐름이 풀리는 결정적 타이밍입니다. 
+                    명리학의 십성(十星) 중 정재(正財)의 기운이 강하게 들어오니, 
+                    오늘은 확실한 보상이 따르는 일에 집중해 보세요!"
+                </p>
+                <span class="tag">#재물운_상승장</span>
+                <span class="tag">#정재_기운_뿜뿜</span>
+            </div>
+        </section>
+
+        <!-- Section 3: 핵심 서비스 (상황/인물/유형픽) -->
+        <section id="sajupick" class="bg-white">
+            <h2 class="section-title">족집게 맞춤 분석, 사주픽 🎯</h2>
+            <div class="grid-container">
+                <div class="card card-skyblue">
+                    <h3>과몰입 상황픽</h3>
+                    <p>도파민 터지는 핀셋 운세. 주역(周易) 64괘로 풀어보는 내일 면접 합격운, 어제 헤어진 연인과의 재회 타이밍을 확인하세요.</p>
+                </div>
+                <div class="card card-peach">
+                    <h3>크로스 인물픽</h3>
+                    <p>우리의 명식(命式)을 겹쳐보면 상생(相生)일까, 상극(相剋)일까? 용신(用神)으로 서로를 채워주는 관계인지 벤다이어그램으로 확인해보세요.</p>
+                </div>
+                <div class="card card-mint">
+                    <h3>그릇 유형픽</h3>
+                    <p>편재(偏財)가 발달한 타고난 승부사? 내 사주에 숨겨진 재물 그릇의 크기와 진짜 무기, 재테크 성향을 입체적으로 분석합니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: 플레이그라운드 -->
+        <section id="playground" class="bg-mint">
+            <h2 class="section-title">매일매일 놀러와! 플레이그라운드 🎡</h2>
+            <div class="grid-container">
+                <div class="card action-card">
+                    <h3>🎨 디지털 부꾸</h3>
+                    <p>내 맘대로 꾸미는 모던 부적. 픽키 스티커를 붙이고 인스타 스토리에 공유해 보세요.</p>
+                </div>
+                <div class="card action-card">
+                    <h3>🐣 픽키 키우기</h3>
+                    <p>오늘의 처방전을 달성하면 내 운세 다마고치 '픽키'가 레벨업! 액운 타파 미션을 수행하세요.</p>
+                </div>
+                <div class="card action-card">
+                    <h3>🗺️ 럭키 핫플</h3>
+                    <p>방위학과 오행의 결합. 오늘 나에게 부족한 기운(木, 火, 土, 金, 水)을 채워줄 동네 핫플을 추천해 드립니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: 라운지 (향후 커뮤니티 확장 영역) -->
+        <section id="lounge" class="bg-white">
+            <h2 class="section-title">우리들의 사주 썰 풀기 💬</h2>
+            <div class="card lounge-card">
+                <p>곧 익명 커뮤니티와 '내 사주함' 기능이 오픈됩니다.<br>친구들과 운세 영수증을 공유하고 궁합을 맞춰보세요!</p>
+                <button class="sub-btn">오픈 알림 받기</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Saju Pick. All rights reserved.</p>
+        <p>본 서비스의 운세 결과는 명리학 데이터를 기반으로 하나, 맹신하기보다는 더 나은 내일을 위한 참고용으로 즐겨주세요!</p>
+    </footer>
+
+    <!-- 로그인 모달 (향후 확장용) -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeLoginModal()">&times;</span>
+            <h2>사주픽 시작하기</h2>
+            <p>1초만에 로그인하고 내 맞춤 사주를 확인하세요.</p>
+            <button class="kakao-btn">카카오로 시작하기</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
